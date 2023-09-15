@@ -61,6 +61,7 @@ let package = Package(
     products: [
         .library(
             name: "IDportSDK",
+            type: .dynamic,
             targets: [
                 "IDportSDK",
                 "CommunicatorFramework",
