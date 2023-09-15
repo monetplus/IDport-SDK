@@ -32,7 +32,9 @@ private class Checksums {
     static let CommunicatorFramework = "804dd18d219845b116a2a80ce67039a3cbf44f3d3ce1e7cdd2c575c697f33c9a"
     static let CoreUtilities = "7ca72ff7251255bd613b12207529a024b525a79a728d354e2d70b5ec37c232ba"
     static let JWECrypto = "7fd19f563c6ed7fed52276c3daff3ce8c216793aa8330b02b011443fcd6666d0"
+    static let JOSESwift = "9a8f1d1b3d63d1c6ad3d67cc9ae34a1bdbadb9004ed244ea0e5eeef9b8e2dcd8"
     static let ECDHESSwift = "3e67e516e52758c42b83947835a04b220e58b56f77f19c46ff7e9dabaa27ee08"
+    static let CryptoSwift = "a73198b3462d4b98cf408a01bda3044c84bc9b35e61cc785fdae1a6d8f1a0f0e"
     static let SecureStorage = "5166fa924fa7fc40f55c0d0df8967c00e063df5f1da9ff18f1c8fb8af37e47fd"
     static let TalsecCertificatesFramework = "8c15748c47034d42e6ab41774a15179d4038883147e2e242638e304716ad5ad5"
     static let TalsecAttestation = "2164404cd108aac91f21c78930f3534f9a2f380d51f96e5f0a95583b88a0b2e0"
@@ -62,11 +64,12 @@ let package = Package(
         .library(
             name: "IDportSDK",
             targets: [
-                "IDportSDK",
                 "CommunicatorFramework",
                 "CoreUtilities",
                 "JWECrypto",
+                "JOSESwift",
                 "ECDHESSwift",
+                "CryptoSwift",
                 "SecureStorage",
                 "TalsecCertificatesFramework",
                 "TalsecAttestation",
@@ -84,15 +87,14 @@ let package = Package(
             ]
         )
     ],
-    dependencies: [
-        .package(url: "git@github.com:airsidemobile/JOSESwift.git", from: Version.init(stringLiteral: Versions.JOSESwift)),
-        .package(url: "git@github.com:krzyzanowskim/CryptoSwift.git", from: Version.init(stringLiteral: Versions.CryptoSwift))
-    ],
+    dependencies: [],
     targets: [
         .binaryTarget(name: "CommunicatorFramework", url: assembleUrl("utils", "CommunicatorFramework", Versions.CommunicatorFramework), checksum: Checksums.CommunicatorFramework),
         .binaryTarget(name: "CoreUtilities", url: assembleUrl("utils", "CoreUtilities", Versions.CoreUtilities), checksum: Checksums.CoreUtilities),
         .binaryTarget(name: "JWECrypto", url: assembleUrl("utils", "JWECrypto", Versions.JWECrypto), checksum: Checksums.JWECrypto),
+        .binaryTarget(name: "JOSESwift", url: assembleUrl("utils", "JOSESwift", Versions.JOSESwift), checksum: Checksums.JOSESwift),
         .binaryTarget(name: "ECDHESSwift", url: assembleUrl("utils", "ECDHESSwift", Versions.ECDHESSwift), checksum: Checksums.ECDHESSwift),
+        .binaryTarget(name: "CryptoSwift", url: assembleUrl("utils", "CryptoSwift", Versions.CryptoSwift), checksum: Checksums.CryptoSwift),
         .binaryTarget(name: "SecureStorage", url: assembleUrl("talsec", "SecureStorage", Versions.SecureStorage), checksum: Checksums.SecureStorage),
         .binaryTarget(name: "TalsecCertificatesFramework", url: assembleUrl("talsec", "TalsecCertificatesFramework", Versions.TalsecCertificatesFramework), checksum: Checksums.TalsecCertificatesFramework),
         .binaryTarget(name: "TalsecAttestation", url: assembleUrl("talsec", "TalsecAttestation", Versions.TalsecAttestation), checksum: Checksums.TalsecAttestation),
@@ -111,13 +113,6 @@ let package = Package(
         .binaryTarget(name: "AQRIdentifySupportFramework", url: assembleUrl("widgetizing", "AQRIdentifySupportFramework", Versions.AQRIdentifySupportFramework), checksum: Checksums.AQRIdentifySupportFramework),
         .binaryTarget(name: "EmailCheckFramework", url: assembleUrl("widgetizing", "EmailCheckFramework", Versions.EmailCheckFramework), checksum: Checksums.EmailCheckFramework),
         .binaryTarget(name: "WidgetUtilsFramework", url: assembleUrl("widgetizing", "WidgetUtilsFramework", Versions.WidgetUtilsFramework), checksum: Checksums.WidgetUtilsFramework),
-        .target(
-            name: "IDportSDK",
-            dependencies: [
-                .product(name: "JOSESwift", package: "joseswift"),
-                .product(name: "CryptoSwift", package: "CryptoSwift"),
-            ]
-        ),
     ]
 )
 
