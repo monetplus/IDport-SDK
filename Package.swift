@@ -61,9 +61,7 @@ let package = Package(
     products: [
         .library(
             name: "IDportSDK",
-            type: .dynamic,
             targets: [
-                "IDportSDK",
                 "CommunicatorFramework",
                 "CoreUtilities",
                 "JWECrypto",
@@ -86,8 +84,6 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "git@github.com:airsidemobile/JOSESwift.git", from: Version.init(stringLiteral: Versions.JOSESwift)),
-        .package(url: "git@github.com:krzyzanowskim/CryptoSwift.git", from: Version.init(stringLiteral: Versions.CryptoSwift))
     ],
     targets: [
         .binaryTarget(name: "CommunicatorFramework", url: assembleUrl("utils", "CommunicatorFramework", Versions.CommunicatorFramework), checksum: Checksums.CommunicatorFramework),
@@ -112,13 +108,6 @@ let package = Package(
         .binaryTarget(name: "AQRIdentifySupportFramework", url: assembleUrl("widgetizing", "AQRIdentifySupportFramework", Versions.AQRIdentifySupportFramework), checksum: Checksums.AQRIdentifySupportFramework),
         .binaryTarget(name: "EmailCheckFramework", url: assembleUrl("widgetizing", "EmailCheckFramework", Versions.EmailCheckFramework), checksum: Checksums.EmailCheckFramework),
         .binaryTarget(name: "WidgetUtilsFramework", url: assembleUrl("widgetizing", "WidgetUtilsFramework", Versions.WidgetUtilsFramework), checksum: Checksums.WidgetUtilsFramework),
-        .target(
-            name: "IDportSDK",
-            dependencies: [
-                .product(name: "JOSESwift", package: "joseswift"),
-                .product(name: "CryptoSwift", package: "CryptoSwift"),
-            ]
-        ),
     ]
 )
 
