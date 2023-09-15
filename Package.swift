@@ -86,8 +86,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "git@github.com:airsidemobile/JOSESwift.git", from: Version.init(stringLiteral: Versions.JOSESwift)),
-        .package(url: "git@github.com:krzyzanowskim/CryptoSwift.git", from: Version.init(stringLiteral: Versions.CryptoSwift))
+        .package(url: "git@gitlab.monetplus.cz:ahead_ios/joseswift.git", from: Version.init(stringLiteral: Versions.JOSESwift)),
+        .package(url: "git@gitlab.monetplus.cz:ahead_ios/CryptoSwift.git", from: Version.init(stringLiteral: Versions.CryptoSwift))
     ],
     targets: [
         .binaryTarget(name: "CommunicatorFramework", url: assembleUrl("utils", "CommunicatorFramework", Versions.CommunicatorFramework), checksum: Checksums.CommunicatorFramework),

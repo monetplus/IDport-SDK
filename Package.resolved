@@ -3,19 +3,19 @@
     {
       "identity" : "cryptoswift",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:krzyzanowskim/CryptoSwift.git",
+      "location" : "git@gitlab.monetplus.cz:ahead_ios/CryptoSwift.git",
       "state" : {
-        "revision" : "32f641cf24fc7abc1c591a2025e9f2f572648b0f",
-        "version" : "1.7.2"
+        "revision" : "3fc5ee10e125bb5e0a634e0d9cc692ff7879b508",
+        "version" : "1.5.1"
       }
     },
     {
       "identity" : "joseswift",
       "kind" : "remoteSourceControl",
-      "location" : "git@github.com:airsidemobile/JOSESwift.git",
+      "location" : "git@gitlab.monetplus.cz:ahead_ios/joseswift.git",
       "state" : {
-        "revision" : "10ed3b6736def7c26eb87135466b1cb46ea7e37f",
-        "version" : "2.4.0"
+        "revision" : "a0d12000efa9948e6d63dc0d7e1a252e45623de3",
+        "version" : "2.0.6"
       }
     }
   ],
