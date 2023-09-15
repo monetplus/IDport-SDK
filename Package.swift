@@ -56,7 +56,7 @@ let nexusUrl = "https://nexus3-public.monetplus.cz/repository/ahead-ios-release/
 let package = Package(
     name: "IDportSDK",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v15)
     ],
     products: [
         .library(
