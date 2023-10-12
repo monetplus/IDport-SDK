@@ -6,24 +6,23 @@ import PackageDescription
 private class Versions {
     static let CommunicatorFramework = "11.0.2"
     static let CoreUtilities = "4.1.0"
-    static let JWECrypto = "4.0.0"
+    static let JWECrypto = "5.0.0"
     static let JOSESwift = "2.0.7"
-    static let ECDHESSwift = "1.0.9"
-    static let CryptoSwift = "1.5.2"
+    static let ECDHESSwift = "2.0.2"
     static let SecureStorage = "9.0.0"
     static let TalsecCertificatesFramework = "12.4.0"
     static let TalsecAttestation = "5.0.1"
-    static let CMSDK = "15.2.0"
+    static let CMSDK = "16.0.0"
     
-    static let SWTActivationCode = "2.0.0"
-    static let TransactionProcessorFramework = "6.0.0"
-    static let NicknameFramework = "6.0.0"
-    static let AnonymousQRFramework = "6.0.0"
-    static let AQRIdentifySupportFramework = "6.0.0"
-    static let EmailCheckFramework = "6.0.0"
-    static let WidgetUtilsFramework = "6.0.0"
-    static let FederatedLoginFramework = "1.0.1"
-    static let OpenIDConnectFramework = "1.0.1"
+    static let SWTActivationCode = "3.0.0"
+    static let TransactionProcessorFramework = "8.0.0"
+    static let NicknameFramework = "8.0.0"
+    static let AnonymousQRFramework = "8.0.0"
+    static let AQRIdentifySupportFramework = "8.0.0"
+    static let EmailCheckFramework = "8.0.0"
+    static let WidgetUtilsFramework = "8.0.0"
+    static let FederatedLoginFramework = "2.0.0"
+    static let OpenIDConnectFramework = "2.0.0"
     
     static let Talsec = "0.2.1"
 }
@@ -31,22 +30,23 @@ private class Versions {
 private class Checksums {
     static let CommunicatorFramework = "804dd18d219845b116a2a80ce67039a3cbf44f3d3ce1e7cdd2c575c697f33c9a"
     static let CoreUtilities = "7ca72ff7251255bd613b12207529a024b525a79a728d354e2d70b5ec37c232ba"
-    static let JWECrypto = "7fd19f563c6ed7fed52276c3daff3ce8c216793aa8330b02b011443fcd6666d0"
-    static let ECDHESSwift = "27ff7367e38591172ac94d3716358b0721ae753172ef7465b7cf98bf2afe1bfa"
+    static let JWECrypto = "6aa0d8935668747ffbd04beabdd31a26cd64720efdb9f71c679e837f1e3ae1b1"
+    static let JOSESwift = "5a5f822b05db76d37244320a956c74673d363b5a97df72f42ffca3ef57c089ef"
+    static let ECDHESSwift = "3f083b9c2388b94f44129ea338df06477823037c8e4fb1055f9887fcd20ef57f"
     static let SecureStorage = "5166fa924fa7fc40f55c0d0df8967c00e063df5f1da9ff18f1c8fb8af37e47fd"
     static let TalsecCertificatesFramework = "8c15748c47034d42e6ab41774a15179d4038883147e2e242638e304716ad5ad5"
     static let TalsecAttestation = "2164404cd108aac91f21c78930f3534f9a2f380d51f96e5f0a95583b88a0b2e0"
-    static let CMSDK = "435ba2c19d1eff30ccfda51eed1fde935ed1bd19cab2054f21c8e2f6d809732e"
+    static let CMSDK = "cea948255ab9411be2bbebed9e70ace82ceb8594203a95880d83557966580ff0"
     
-    static let SWTActivationCode = "2bb9e906276a869ac7847d6758c81f1f65283084cb9acaa2d6855c3f662b7b93"
-    static let TransactionProcessorFramework = "211163ae385d6dc78eafabedde6b952e7538380fb7f20477716ab16a9067c581"
-    static let NicknameFramework = "dfde18c938a52d74208436beba797645a942155ad74d02096bcd7d14cb0ff7c5"
-    static let AnonymousQRFramework = "445ceda650fe4b255c7e8ac75db5dac97f4fdb1b143cb0c1f7b569a2024e849f"
-    static let AQRIdentifySupportFramework = "c5be983e136e5afb61a85fb31cdbb16948d6eedd3124ee09230e81673e330676"
-    static let EmailCheckFramework = "c0df2cefab0a80119bdf91c661437688069b59ebc1500080a75f9530a1690207"
-    static let WidgetUtilsFramework = "08a3616da383f3d219937aa431dbbfb50e9a22735226cb2a5364988a73c0d839"
-    static let FederatedLoginFramework = "4df0b25b07fc94216cbedcf53fa5316176469dbe5ec5f1e68856344ef8df1733"
-    static let OpenIDConnectFramework = "a346027f8e00804ab98207561488364667fd40554b7d32cfddcaf1b5bc3eda51"
+    static let SWTActivationCode = "ef192eb3a29d6d55d4fb625281f476db9bff0d7c0258b0f1747eedc9637c2556"
+    static let TransactionProcessorFramework = "f84ca5032e9c30c09fdf13f02eec35d296a9e6f8b240f36c1ea5cee88b019d8d"
+    static let NicknameFramework = "b66f5c35bbc7aaf43125f4f78eacbea26f0b1bd317ff4c7eca5ccaf31efb87a4"
+    static let AnonymousQRFramework = "5e05043e260dd6cfae6f74600de6444e52189360a96fafbfb49e0ca595325143"
+    static let AQRIdentifySupportFramework = "3e3dc4d1c2af79284f7241b5a35aedba2aed0c52a37e3f5888b7a90de60c3658"
+    static let EmailCheckFramework = "d91c6f9c8ebd3c8349198a8516432a7944fbebe3752ebdd7d343b806a4e1bf7e"
+    static let WidgetUtilsFramework = "df641463a615d0dfd56698a2ac06ba915bddce360f02cd78374a235b9c1f87fc"
+    static let FederatedLoginFramework = "0602682e59c34fdc0f41afbbc3f1ec02110b4e051a56f47c7ecf45b571b6cb5f"
+    static let OpenIDConnectFramework = "29943a4910b9a791a35198d7688fd2a391b6da18fc146c5446ab307974db03ec"
     
     static let Talsec = "6dbc8fdfdfbe76bb6cdd957ebbfe762c694e2d59cc2da4cfeba264476fdd62f8"
 }
@@ -66,6 +66,7 @@ let package = Package(
                 "CommunicatorFramework",
                 "CoreUtilities",
                 "JWECrypto",
+                "JOSESwift",
                 "ECDHESSwift",
                 "SecureStorage",
                 "TalsecCertificatesFramework",
@@ -84,15 +85,13 @@ let package = Package(
             ]
         )
     ],
-    dependencies: [
-        .package(url: "git@github.com:airsidemobile/JOSESwift.git", from: Version.init(stringLiteral: Versions.JOSESwift)),
-        .package(url: "git@github.com:krzyzanowskim/CryptoSwift.git", from: Version.init(stringLiteral: Versions.CryptoSwift))
-    ],
+    dependencies: [],
     targets: [
         .binaryTarget(name: "CommunicatorFramework", url: assembleUrl("utils", "CommunicatorFramework", Versions.CommunicatorFramework), checksum: Checksums.CommunicatorFramework),
         .binaryTarget(name: "CoreUtilities", url: assembleUrl("utils", "CoreUtilities", Versions.CoreUtilities), checksum: Checksums.CoreUtilities),
         .binaryTarget(name: "JWECrypto", url: assembleUrl("utils", "JWECrypto", Versions.JWECrypto), checksum: Checksums.JWECrypto),
         .binaryTarget(name: "ECDHESSwift", url: assembleUrl("utils", "ECDHESSwift", Versions.ECDHESSwift), checksum: Checksums.ECDHESSwift),
+        .binaryTarget(name: "JOSESwift", url: assembleUrl("utils", "JOSESwift", Versions.JOSESwift), checksum: Checksums.JOSESwift),
         .binaryTarget(name: "SecureStorage", url: assembleUrl("talsec", "SecureStorage", Versions.SecureStorage), checksum: Checksums.SecureStorage),
         .binaryTarget(name: "TalsecCertificatesFramework", url: assembleUrl("talsec", "TalsecCertificatesFramework", Versions.TalsecCertificatesFramework), checksum: Checksums.TalsecCertificatesFramework),
         .binaryTarget(name: "TalsecAttestation", url: assembleUrl("talsec", "TalsecAttestation", Versions.TalsecAttestation), checksum: Checksums.TalsecAttestation),
@@ -113,10 +112,7 @@ let package = Package(
         .binaryTarget(name: "WidgetUtilsFramework", url: assembleUrl("widgetizing", "WidgetUtilsFramework", Versions.WidgetUtilsFramework), checksum: Checksums.WidgetUtilsFramework),
         .target(
             name: "IDportSDK",
-            dependencies: [
-                .product(name: "JOSESwift", package: "joseswift"),
-                .product(name: "CryptoSwift", package: "CryptoSwift"),
-            ]
+            dependencies: []
         ),
     ]
 )
