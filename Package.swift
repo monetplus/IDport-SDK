@@ -14,7 +14,7 @@ private class Versions {
     static let TalsecAttestation = "5.0.1"
     static let CMSDK = "16.0.0"
     
-    static let SWTActivationCode = "3.1.0"
+    static let SWTActivationCode = "5.0.0"
     static let TransactionProcessorFramework = "8.0.0"
     static let NicknameFramework = "8.0.0"
     static let AnonymousQRFramework = "8.0.0"
@@ -38,7 +38,7 @@ private class Checksums {
     static let TalsecAttestation = "2164404cd108aac91f21c78930f3534f9a2f380d51f96e5f0a95583b88a0b2e0"
     static let CMSDK = "cea948255ab9411be2bbebed9e70ace82ceb8594203a95880d83557966580ff0"
     
-    static let SWTActivationCode = "62616b5f0039ce7e7e0b7b52e1b9df7dc0735b25d1eaee28a2f3c328e4cc33b0"
+    static let SWTActivationCode = "ca9a10734cff7fe371850f3e867fa7b31cb0c6e1aff2bc9b2cf70a037fce3f2a"
     static let TransactionProcessorFramework = "f84ca5032e9c30c09fdf13f02eec35d296a9e6f8b240f36c1ea5cee88b019d8d"
     static let NicknameFramework = "b66f5c35bbc7aaf43125f4f78eacbea26f0b1bd317ff4c7eca5ccaf31efb87a4"
     static let AnonymousQRFramework = "5e05043e260dd6cfae6f74600de6444e52189360a96fafbfb49e0ca595325143"
