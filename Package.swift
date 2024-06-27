@@ -12,7 +12,7 @@ private class Versions {
     static let SecureStorage = "9.1.0"
     static let TalsecCertificatesFramework = "12.5.0"
     static let TalsecAttestation = "5.0.1"
-    static let CMSDK = "19.1.0"
+    static let CMSDK = "20.0.0"
     
     static let SWTActivationCode = "5.0.0"
     static let TransactionProcessorFramework = "14.1.0"
@@ -36,7 +36,7 @@ private class Checksums {
     static let SecureStorage = "24667265ec916bed7c7157c4251746c815cde682011afacbd3b6876825c2c5d2"
     static let TalsecCertificatesFramework = "e0580c88adf7c0708bd0fb6447c20bb49c9fcc27e38de37c63cca074bad0c14c"
     static let TalsecAttestation = "2164404cd108aac91f21c78930f3534f9a2f380d51f96e5f0a95583b88a0b2e0"
-    static let CMSDK = "569ab58bfb15909c201a79caf9549b204043fa73e81ad9dcce9728c34bddb5b0"
+    static let CMSDK = "7b4977bc0150382585a501c4324b39af48a81bd0ec9eaa0f0d5791a883210f61"
     
     static let SWTActivationCode = "ca9a10734cff7fe371850f3e867fa7b31cb0c6e1aff2bc9b2cf70a037fce3f2a"
     static let TransactionProcessorFramework = "bf089ce6ab982ea87c5a433d8786a21568d95b143583b4ec31053fafedd62e4f"
