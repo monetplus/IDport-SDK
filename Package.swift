@@ -10,7 +10,7 @@ private class Versions {
     static let SecureStorage = "11.1.0"
     static let DynamicCertificatePinningFramework = "18.1.1"
     static let ApplicationAttestationFramework = "8.0.1"
-    static let CMSDK = "25.0.0"
+    static let CMSDK = "25.0.1"
 
     static let SWTActivationCode = "9.0.1"
     static let TransactionProcessorFramework = "24.0.1"
@@ -32,7 +32,7 @@ private class Checksums {
     static let SecureStorage = "248bab2e37ae8ea4ee4b4ac902648d52c52aa1870b53a3b51a87ac05120bc539"
     static let DynamicCertificatePinningFramework = "21e8d66b396f5015eccd8424d5ff368a2474b4b7e19666e9e95b99db072489a1"
     static let ApplicationAttestationFramework = "40839800bb291b4a8a866c2931ab84418f163185ee8762c6f16eaf8ca14bbb76"
-    static let CMSDK = "fefab248478bcd2ba2c59959b0cf71f1c78fe0254814e8e58b8f06358119e4e9"
+    static let CMSDK = "5dc764c71f5c6c472b6bedb3f5c6286af785758659e07b7656bd449badbd3214"
 
     static let SWTActivationCode = "1910ea1035fbc5c5ab70a16a36b01831a7cbcdab6c6670ccfee223186380b902"
     static let TransactionProcessorFramework = "c2baf0ded67368beed4ffca60b63fe719537c496bf0fecc20eef20be03f8fd9b"
@@ -63,7 +63,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-certificates.git", exact: "1.18.0")
+        .package(url: "https://github.com/apple/swift-certificates.git", exact: "1.18.0"),
+        .package(url: "https://github.com/krzyzanowskim/CryptoSwift.git", exact: "1.9.0")
     ],
     targets: [
         .binaryTarget(name: "CommunicatorFramework", url: assembleUrl("utils", "CommunicatorFramework", Versions.CommunicatorFramework), checksum: Checksums.CommunicatorFramework),
@@ -73,29 +74,34 @@ let package = Package(
         .binaryTarget(name: "DynamicCertificatePinningFramework", url: assembleUrl("DynamicCertificatePinningFramework", "DynamicCertificatePinningFramework", Versions.DynamicCertificatePinningFramework), checksum: Checksums.DynamicCertificatePinningFramework),
         .binaryTarget(name: "ApplicationAttestationFramework", url: assembleUrl("security", "ApplicationAttestationFramework", Versions.ApplicationAttestationFramework), checksum: Checksums.ApplicationAttestationFramework),
 
-        .binaryTarget(name: "Talsec", url: assembleUrl("talsec", "Talsec", Versions.Talsec), checksum: Checksums.Talsec),
+            .binaryTarget(name: "Talsec", url: assembleUrl("talsec", "Talsec", Versions.Talsec), checksum: Checksums.Talsec),
         .binaryTarget(name: "CMSDK", url: assembleUrl("cmsdk", "CMSDK", Versions.CMSDK), checksum: Checksums.CMSDK),
 
-        .binaryTarget(name: "FederatedLoginFramework", url: assembleUrl("FederatedLogin", "FederatedLoginFramework", Versions.FederatedLoginFramework), checksum: Checksums.FederatedLoginFramework),
+            .binaryTarget(name: "FederatedLoginFramework", url: assembleUrl("FederatedLogin", "FederatedLoginFramework", Versions.FederatedLoginFramework), checksum: Checksums.FederatedLoginFramework),
         .binaryTarget(name: "OpenIDConnectFramework", url: assembleUrl("FederatedLogin", "OpenIDConnectFramework", Versions.OpenIDConnectFramework), checksum: Checksums.OpenIDConnectFramework),
 
-        .binaryTarget(name: "SWTActivationCode", url: assembleUrl("MethodManager", "SWTActivationCode", Versions.SWTActivationCode), checksum: Checksums.SWTActivationCode),
+            .binaryTarget(name: "SWTActivationCode", url: assembleUrl("MethodManager", "SWTActivationCode", Versions.SWTActivationCode), checksum: Checksums.SWTActivationCode),
 
-        .binaryTarget(name: "TransactionProcessorFramework", url: assembleUrl("widgetizing", "TransactionProcessorFramework", Versions.TransactionProcessorFramework), checksum: Checksums.TransactionProcessorFramework),
+            .binaryTarget(name: "TransactionProcessorFramework", url: assembleUrl("widgetizing", "TransactionProcessorFramework", Versions.TransactionProcessorFramework), checksum: Checksums.TransactionProcessorFramework),
         .binaryTarget(name: "NicknameFramework", url: assembleUrl("widgetizing", "NicknameFramework", Versions.NicknameFramework), checksum: Checksums.NicknameFramework),
         .binaryTarget(name: "AnonymousQRFramework", url: assembleUrl("widgetizing", "AnonymousQRFramework", Versions.AnonymousQRFramework), checksum: Checksums.AnonymousQRFramework),
         .binaryTarget(name: "AQRIdentifySupportFramework", url: assembleUrl("widgetizing", "AQRIdentifySupportFramework", Versions.AQRIdentifySupportFramework), checksum: Checksums.AQRIdentifySupportFramework),
         .binaryTarget(name: "EmailCheckFramework", url: assembleUrl("widgetizing", "EmailCheckFramework", Versions.EmailCheckFramework), checksum: Checksums.EmailCheckFramework),
         .binaryTarget(name: "WidgetUtilsFramework", url: assembleUrl("widgetizing", "WidgetUtilsFramework", Versions.WidgetUtilsFramework), checksum: Checksums.WidgetUtilsFramework),
-
         .target(
-            name: "CMSDKCertificatesSupport",
+            name: "CMSDKCertificatesSupport_Swift",
             dependencies: [
                 "CMSDK",
                 .product(name: "X509", package: "swift-certificates")
             ]
         ),
-
+        .target(
+            name: "CMSDKCertificatesSupport_ObjC",
+            dependencies: [
+                "CMSDKCertificatesSupport_Swift"
+            ],
+            publicHeadersPath: "_includes"
+        ),
         .target(
             name: "IDportSDK",
             dependencies: [
@@ -107,7 +113,7 @@ let package = Package(
                 "ApplicationAttestationFramework",
                 "Talsec",
                 "CMSDK",
-                "CMSDKCertificatesSupport",
+                "CMSDKCertificatesSupport_ObjC",
                 "SWTActivationCode",
                 "TransactionProcessorFramework",
                 "NicknameFramework",
@@ -116,7 +122,8 @@ let package = Package(
                 "EmailCheckFramework",
                 "WidgetUtilsFramework",
                 "FederatedLoginFramework",
-                "OpenIDConnectFramework"
+                "OpenIDConnectFramework",
+                .product(name: "CryptoSwift", package: "cryptoswift")
             ]
         ),
     ]
