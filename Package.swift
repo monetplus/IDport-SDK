@@ -8,7 +8,7 @@ private class Versions {
     static let CoreUtilities = "6.0.1"
     static let JOSESwift = "3.0.0"
     static let SecureStorage = "11.1.0"
-    static let DynamicCertificatePinningFramework = "18.1.1"
+    static let DynamicCertificatePinningFramework = "18.1.2"
     static let ApplicationAttestationFramework = "8.0.1"
     static let CMSDK = "25.0.1"
 
@@ -30,7 +30,7 @@ private class Checksums {
     static let CoreUtilities = "5e6cf6c6dba4c0cb197f2c12278ebbbdaec4bc70a0afe7919682a2ec75d428b7"
     static let JOSESwift = "f23c30ed15df37820b6674b4b0141312f10cfbcfe48fc123d5adc345d4460902"
     static let SecureStorage = "248bab2e37ae8ea4ee4b4ac902648d52c52aa1870b53a3b51a87ac05120bc539"
-    static let DynamicCertificatePinningFramework = "21e8d66b396f5015eccd8424d5ff368a2474b4b7e19666e9e95b99db072489a1"
+    static let DynamicCertificatePinningFramework = "3719d3eab910b646c34d31356625cdf03a854902ba01fe4325855cc30bd42537"
     static let ApplicationAttestationFramework = "40839800bb291b4a8a866c2931ab84418f163185ee8762c6f16eaf8ca14bbb76"
     static let CMSDK = "5dc764c71f5c6c472b6bedb3f5c6286af785758659e07b7656bd449badbd3214"
 
