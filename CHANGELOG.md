@@ -1,3 +1,11 @@
+10.1.0
+* `DynamicCertificatePinning 18.1.2`
+  * `FormatVersion` struct now contains optional parameter `formatVersion: Int?`
+* `Widgetizing 25.1.0`
+  * added `create(communicator:widgetState:)` to `EmailCheckFactory`, `AnonymousQRFactory`, `OneTimePasswordFactory`, `SoftwareTokenFactory` and `ExtIdentityProviderFactory` to resume a widget from a stored `WidgetState`; the previous way (the `init(communicator:widgetState:)` of the widget classes) has been unreachable since `20.0.0` made the classes internal
+  * `WidgetState` in `AnonymousQRFramework` and `ExtIdentityProviderFramework` is now `Codable`, so it can be persisted like in the other widgets; `InitResponseDataObject`, `Request`, `DictionaryWithDefault` and `LogoImage` in `ExtIdentityProviderFramework` changed from `Decodable` to `Codable` for that
+  * fixed `SoftwareTokenVerificationManageable.poll()`: the response `data` is now decoded as `{ "state": ... }` instead of a bare string, which failed with a deserialization error
+
 10.0.0
 * `CMSDK 27.0.0`
   * fixed cases when `AccountTypeStorage` removed all account types on keychain read failure
