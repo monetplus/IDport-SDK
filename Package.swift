@@ -8,9 +8,9 @@ private class Versions {
     static let CoreUtilities = "6.0.1"
     static let JOSESwift = "3.0.0"
     static let SecureStorage = "11.1.0"
-    static let DynamicCertificatePinningFramework = "18.1.2"
+    static let DynamicCertificatePinningFramework = "18.1.3"
     static let ApplicationAttestationFramework = "8.0.1"
-    static let CMSDK = "27.0.0"
+    static let CMSDK = "27.0.1"
 
     static let SWTActivationCode = "9.0.1"
     static let TransactionProcessorFramework = "25.1.0"
@@ -30,9 +30,9 @@ private class Checksums {
     static let CoreUtilities = "5e6cf6c6dba4c0cb197f2c12278ebbbdaec4bc70a0afe7919682a2ec75d428b7"
     static let JOSESwift = "f23c30ed15df37820b6674b4b0141312f10cfbcfe48fc123d5adc345d4460902"
     static let SecureStorage = "248bab2e37ae8ea4ee4b4ac902648d52c52aa1870b53a3b51a87ac05120bc539"
-    static let DynamicCertificatePinningFramework = "3719d3eab910b646c34d31356625cdf03a854902ba01fe4325855cc30bd42537"
+    static let DynamicCertificatePinningFramework = "68e1b2007652cd44b3564716eb75f6042732a90a7ee4227dcb0d611b4ad3e2c9"
     static let ApplicationAttestationFramework = "40839800bb291b4a8a866c2931ab84418f163185ee8762c6f16eaf8ca14bbb76"
-    static let CMSDK = "8550e11897fef171ed364068eff9393c28a2ef246c7ad1f18cb9401e2914506e"
+    static let CMSDK = "9e85c8314239b94452f5a4b870941d8c860275ab2afbef288a36f209faa350de"
 
     static let SWTActivationCode = "1910ea1035fbc5c5ab70a16a36b01831a7cbcdab6c6670ccfee223186380b902"
     static let TransactionProcessorFramework = "707d1c87d2d896ef3c9b28b942df842dec980af07f89160916e1d2b3d0f856b9"

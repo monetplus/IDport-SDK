@@ -1,3 +1,9 @@
+10.1.1
+* `CMSDK 27.0.1`
+  * removed `DynamicCertificatePinningFramework` and `ApplicationAttestationFramework` from Embed Frameworks
+* `DynamicCertificatePinning 18.1.3`
+  * removed `CoreUtilities`, `CommunicatorFramework` and `SecureStorage` from Embed Frameworks
+
 10.1.0
 * `DynamicCertificatePinning 18.1.2`
   * `FormatVersion` struct now contains optional parameter `formatVersion: Int?`
